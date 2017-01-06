@@ -1,0 +1,6 @@
+<h1>Home Page</h1>
+<section class="rooms-list">
+	<div ng-repeat="room in vm.chatRooms" class = "chatrooms">
+		<a ng-click="vm.selectRoom(room)">{{ room.name }}</a>
+	</div>
+</section>
