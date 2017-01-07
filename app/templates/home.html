@@ -1,3 +1,6 @@
 <section class="hero-content">
-    <h1 class="hero-title" ui-sref="rooms">{{ home.heroTitle }}</h1>
+    <h1 class="hero-title">{{ home.heroTitle }}</h1>
+	<ul> 
+		<li ng-repeat="room in home.rooms"> {{ room.name }} </li>
+	</ul>
 </section>
