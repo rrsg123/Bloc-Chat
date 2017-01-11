@@ -1,6 +1,17 @@
 <section class="hero-content">
     <h1 class="hero-title">{{ home.heroTitle }}</h1>
 	<ul> 
-		<li ng-repeat="room in home.rooms"> {{ room.name }} </li>
+		<li ng-repeat="room in rooms">
+        		{{ room.name }}
+ 			Room 1
+			Room 2
+			Room 3
+   		</li>
 	</ul>
+
+<!-- push a new room onto the array -->
+<form ng-submit="addRoom()">
+    <input ng-model="newRoomName" />
+    <button type="submit">Create Room</button>
+</form>
 </section>
