@@ -1,17 +1,17 @@
-<section class="hero-content">
-    <h1 class="hero-title">{{ home.heroTitle }}</h1>
-	<ul> 
-		<li ng-repeat="room in rooms">
-        		{{ room.name }}
- 			Room 1
-			Room 2
-			Room 3
-   		</li>
-	</ul>
-
-<!-- push a new room onto the array -->
-<form ng-submit="addRoom()">
-    <input ng-model="newRoomName" />
-    <button type="submit">Create Room</button>
-</form>
+<section class="jumbotron">
+	<h1 id="home-title">Bloc Chat</h1>
+	<p id="home-tagline">Chat it Up!</p>
 </section>
+
+<div class="col-md-3 sidebar">
+	<div class="header">
+		<p class="title">Chat Rooms</p>
+		<div class="new-chat-room">
+			<button class="btn btn-primary" ng-click="home.openModal()"><strong>+</strong> New Chat Room</button>
+		</div>
+	</div>
+	
+	<ul class="rooms-list">
+		<li ng-repeat="room in home.chatRooms" class="chatrooms"></li>
+	</ul>
+</div>

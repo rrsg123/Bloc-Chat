@@ -1,21 +1,26 @@
 (function() {
-    function ModalCtrl($scope, $uibModal, Room) {
-        $scope.rooms = Room.all;
-        
-        $scope.create = function() {
-            $scope.rooms.$add({
-                name: $scope.newRoomName
-            });
-            
-            $uibModal.close();
-        };
-        
-        $scope.cancel = function() {
-            $uibModal.dismiss();
-        };
-    }
-    
-    angular
-        .module('blocChat')
-        .controller('ModalCtrl', ['$scope', '$uibModal', 'Room', ModalCtrl]);
+	function ModalCtrl($uibModal) {
+		this.newChatRoom = function() {
+			
+			var modalInstance = $uibModal.open({
+				templateUrl: '/templates/modal.html',
+				controller: function ($scope, $uibModalInstance) {
+					$scope.cancel = function() {
+						Modal.dismiss('Cancel');
+					};
+		
+					$scope.create = function() {
+						Modal.close();
+					};
+				},
+				size: 'sm'	
+			});
+		}	
+		
+	}
+	
+
+	angular
+		.module('blocChat')
+		.controller('ModalCtrl', ['$uibModal', ModalCtrl]);
 })();
