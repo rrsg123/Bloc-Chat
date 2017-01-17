@@ -3,15 +3,18 @@
 	<p id="home-tagline">Chat it Up!</p>
 </section>
 
-<div class="col-md-3 sidebar">
-	<div class="header">
-		<p class="title">Chat Rooms</p>
-		<div class="new-chat-room">
-			<button class="btn btn-primary" ng-click="home.openModal()"><strong>+</strong> New Chat Room</button>
+<div class="container">
+	<div class="col-lg-3 sidebar">
+		<div class="header">
+			<p class="title">Chat Rooms</p>
+				<div class="new-chat-room">
+					<button class="btn btn-primary" ng-click="home.openModal()"><strong>+</strong> New Chat Room</button>
+				</div>
 		</div>
+	<div class= "col-md-4 sidebar">			
+		<ul class="rooms-list" ng-repeat="room in home.chatRooms" class="chatrooms" ng-click="setCurrentRoom">
+			<li>{{ room.name }}</li>
+		</ul>
 	</div>
-	
-	<ul class="rooms-list">
-		<li ng-repeat="room in home.chatRooms" class="chatrooms"></li>
-	</ul>
+	</div>
 </div>

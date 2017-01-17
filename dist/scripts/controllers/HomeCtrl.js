@@ -1,7 +1,7 @@
 (function() {
 	function HomeCtrl(Room, $uibModal){
 		this.chatRooms = Room.getRooms().all;
-		this.roomService = Room;
+		this.room = Room;
 		
 		this.openModal = function() {
 			var modal_instance = $uibModal.open({
@@ -20,7 +20,7 @@
 			});
 			
 			modal_instance.result.then(function(data) {
-				vm.roomService.addRoom(data);
+				Room.addRoom(data);
 			});
 		};
 	};

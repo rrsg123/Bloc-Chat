@@ -23,7 +23,7 @@
 			});
 		}
 		
-		return newChatRoom();
+		return newRoom();
 	}
 	
 	angular
