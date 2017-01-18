@@ -19,6 +19,11 @@
 		function addRoom(name) {
 			roomRef.$add(name);
 		};
+
+		function getMessages(roomId) {
+			return $firebaseArray(firebaseRef.child('messages').orderByChild("roomID").equalTo(roomId));
+		}
+		
 	}
 	
 	angular

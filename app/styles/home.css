@@ -1,7 +1,73 @@
 body {
-    background-color: beige;
-    font-family: 'Vidaloka', serif;
-    color: grey;
-    min-height: 100%;
-    padding-bottom: 200px;
+	background-color: #B5B4B5;
+}
+
+.container #ng-scope {
+	padding-left: 150px;
+	margin: 0;
+	background-color: #B5B4B5;
+	bottom: 50px;	
+}
+
+.main {
+	left-padding: 150px;
+}
+
+.jumbotron #home-title {
+	text-align: center;
+	margin: 0;
+}
+
+.jumbotron #home-tagline {
+	text-align: center;
+	margin: 0;
+}
+
+.jumbotron #ng-scope {
+	margin, padding: 0;
+}
+
+.col-1-md-sidebar {
+	background-color: #B5B4B5;
+	margin: none;
+}
+
+.sidebar {
+	position: absolute;
+	clear: both;
+	background-color: #B5B4B5;
+	width: 150px;
+}
+
+.sidebar .header {
+	margin: auto;
+}
+
+.sidebar .header .title {
+	text-align: center;
+	font-size: 30px;
+}
+
+.sidebar .header .new-chat-room {
+	text-align: center;
+}
+
+.sidebar .rooms-list {
+	text-align: left;
+	padding-left: 2px;
+}
+
+.sidebar .rooms-list .chatrooms {
+	text-align: left;
+	display: inline-block;
+}
+
+.chatroom {
+	background-color: ghostwhite;
+	height: 1000px;
+	float: right;
+}
+
+.chatroom .message-input {
+	float: left;
 }

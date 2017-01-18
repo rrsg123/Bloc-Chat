@@ -2,12 +2,6 @@
 	function Modal($uibModal) {
 		function newChatRoom() {
 			
-			return {
-				open_create_room_modal: function() {
-					
-				},
-			};
-			
 			return $uibModal.open({
 				templateUrl: '/templates/modal.html',
 				controller: function ($scope, $uibModalInstance) {

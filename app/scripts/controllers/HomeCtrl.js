@@ -2,6 +2,11 @@
 	function HomeCtrl(Room, $uibModal){
 		this.chatRooms = Room.getRooms().all;
 		this.room = Room;
+	
+		this.sendMessage = function() {
+			Message.send(this.newMessage, this.selectedRoom.$id);
+			this.newMessage = '';
+		} 
 		
 		this.openModal = function() {
 			var modal_instance = $uibModal.open({
@@ -23,6 +28,7 @@
 				Room.addRoom(data);
 			});
 		};
+
 	};
 	
 	angular
